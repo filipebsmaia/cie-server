@@ -89,4 +89,35 @@ module.exports = {
     uid: 'email',
     password: 'password',
   },
+
+  /*
+  |--------------------------------------------------------------------------
+  | User / Staff
+  |--------------------------------------------------------------------------
+  |
+  | --
+  |
+  */
+
+  user: {
+    serializer: 'lucid',
+    model: 'App/Models/User',
+    scheme: 'jwt',
+    uid: 'email',
+    password: 'password',
+    options: {
+      secret: Env.get('APP_KEY'),
+    },
+  },
+
+  // staff: {
+  //   serializer: 'lucid',
+  //   model: 'App/Models/Staff',
+  //   scheme: 'jwt',
+  //   uid: 'email',
+  //   password: 'password',
+  //   options: {
+  //     secret: Env.get('APP_KEY_STAFF'),
+  //   },
+  // },
 };
