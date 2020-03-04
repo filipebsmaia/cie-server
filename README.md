@@ -1,6 +1,6 @@
-# Adonis API application
+# CIE MOBILE
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+This is the back-end of the CIE App.
 
 1. Bodyparser
 2. Authentication
@@ -10,14 +10,7 @@ This is the boilerplate for creating an API server in AdonisJs, it comes pre-con
 
 ## Setup
 
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick --api-only
-```
-
-or manually clone the repo and then run `npm install`.
-
+Clone the repo and then run `npm install`.
 
 ### Migrations
 
