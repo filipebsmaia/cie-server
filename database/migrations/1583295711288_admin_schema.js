@@ -13,6 +13,10 @@ class AdminSchema extends Schema {
       table.string('password', 60).notNullable();
       table.string('tel', 20);
       table
+        .boolean('root')
+        .defaultTo('false')
+        .notNullable();
+      table
         .integer('instituition_id')
         .unsigned()
         .references('id')

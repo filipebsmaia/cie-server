@@ -6,10 +6,11 @@ class User {
   }
 
   get rules() {
+    const userId = this.ctx.params.id;
     return {
-      name: 'required|string',
-      email: 'required|email|unique:staff|max:255',
-      password: 'required|confirmed|max:60',
+      name: 'string',
+      email: `email|unique:staff,email,id,${userId}|max:255`,
+      password: 'confirmed|max:60',
       tel: 'string',
       root: 'boolean',
       avatar_id: 'integer|exists:files,id',

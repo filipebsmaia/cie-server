@@ -12,7 +12,10 @@ class StaffSchema extends Schema {
         .unique();
       table.string('password', 60).notNullable();
       table.string('tel', 20);
-      table.boolean('root').defaultTo('false');
+      table
+        .boolean('root')
+        .defaultTo('false')
+        .notNullable();
       table
         .integer('avatar_id')
         .unsigned()

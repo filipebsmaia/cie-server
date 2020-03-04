@@ -7,10 +7,9 @@ class User {
 
   get rules() {
     return {
-      name: 'required|unique:staff',
+      name: 'required|string',
       email: 'required|email|unique:staff|max:255',
       password: 'required|confirmed|max:60',
-      instituition_id: 'required|integer|exists:instituitions,id',
     };
   }
 
