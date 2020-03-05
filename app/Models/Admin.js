@@ -8,9 +8,9 @@ class Admin extends Model {
   static boot() {
     super.boot();
 
-    this.addHook('beforeSave', async userInstance => {
-      if (userInstance.dirty.password) {
-        userInstance.password = await Hash.make(userInstance.password);
+    this.addHook('beforeSave', async adminInstance => {
+      if (adminInstance.dirty.password) {
+        adminInstance.password = await Hash.make(adminInstance.password);
       }
     });
   }

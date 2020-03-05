@@ -8,9 +8,9 @@ class Staff extends Model {
   static boot() {
     super.boot();
 
-    this.addHook('beforeSave', async userInstance => {
-      if (userInstance.dirty.password) {
-        userInstance.password = await Hash.make(userInstance.password);
+    this.addHook('beforeSave', async staffInstance => {
+      if (staffInstance.dirty.password) {
+        staffInstance.password = await Hash.make(staffInstance.password);
       }
     });
   }

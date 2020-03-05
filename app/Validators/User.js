@@ -10,8 +10,8 @@ class User {
       name: 'required|string',
       email: 'required|email|unique:users|max:255',
       password: 'required|confirmed|max:60',
-      instituition_id: 'required|integer|exists:instituitions,id',
-      course_id: 'required|integer|exists:course,id',
+      // instituition_id: 'required|integer|exists:instituitions,id',
+      // course_id: 'required|integer|exists:course,id',
       registration: 'required',
     };
   }
